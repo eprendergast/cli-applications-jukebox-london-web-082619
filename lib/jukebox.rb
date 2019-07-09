@@ -40,7 +40,7 @@ def play(songs)
   if songs.include?(request)
     # the method should puts out: "Playing <song name>".
     puts "Playing #{request}"
-  elsif songs[request.to_i]
+  elsif songs[request.to_i] > 0 && songs[request.to_i] < songs.length
     puts "Playing #{songs[request.to_i - 1]}."
   else
     # Otherwise, it should puts out: "Invalid input, please try again".
